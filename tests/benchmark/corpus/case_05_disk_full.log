@@ -1,0 +1,4 @@
+2025-10-10T14:00:00Z ##[group]Run asset compilation
+2025-10-10T14:00:01Z Generating pre-rendered pages...
+2025-10-10T14:00:02Z write error: No space left on device
+2025-10-10T14:00:03Z ##[error]Process completed with exit code 1.

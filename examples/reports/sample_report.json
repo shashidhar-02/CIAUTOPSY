@@ -1,0 +1,193 @@
+{
+  "schema_version": "0.1.0",
+  "log_path": "C:\\Users\\shashidhar  mushike\\Downloads\\CIAUTOPSY\\examples\\logs\\failed_python_import.log",
+  "total_lines": 17,
+  "platform": "GitHub Actions",
+  "leading_root_cause": {
+    "rule_id": "DEP-001",
+    "rule_version": "1.0.0",
+    "title": "Missing Python Dependency: 'pydantic_settings'",
+    "description": "The build failed because Python module 'pydantic_settings' is not installed or not included in your environment specification.",
+    "category": "Dependency Resolution",
+    "severity": "HIGH",
+    "remediation": "1. Add 'pydantic_settings' to your `requirements.txt`, `pyproject.toml`, or `setup.cfg`.\n2. Ensure the step installing dependencies (`pip install`, `poetry install`, `uv sync`) runs before executing code.\n3. If using an isolated virtual environment, verify it is activated in this CI step.",
+    "detection_rationale": "Matched signature 'DEP-001: Python Module Not Found' in log lines",
+    "confidence": 0.95,
+    "confidence_explanation": "Explicit ModuleNotFoundError traceback observed",
+    "is_primary_cause": true,
+    "evidence": [
+      {
+        "line_number": 15,
+        "matched_text": "ModuleNotFoundError: No module named 'pydantic_settings'",
+        "context_lines": [
+          {
+            "line": 12,
+            "text": "Traceback (most recent call last):"
+          },
+          {
+            "line": 13,
+            "text": "File \"/home/runner/work/repo/tests/test_api.py\", line 4, in <module>"
+          },
+          {
+            "line": 14,
+            "text": "from pydantic_settings import BaseSettings"
+          },
+          {
+            "line": 15,
+            "text": "ModuleNotFoundError: No module named 'pydantic_settings'"
+          },
+          {
+            "line": 16,
+            "text": "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!"
+          }
+        ],
+        "metadata": {
+          "module": "pydantic_settings"
+        }
+      }
+    ],
+    "related_symptoms": [],
+    "limitations": null
+  },
+  "primary_root_cause": {
+    "rule_id": "DEP-001",
+    "rule_version": "1.0.0",
+    "title": "Missing Python Dependency: 'pydantic_settings'",
+    "description": "The build failed because Python module 'pydantic_settings' is not installed or not included in your environment specification.",
+    "category": "Dependency Resolution",
+    "severity": "HIGH",
+    "remediation": "1. Add 'pydantic_settings' to your `requirements.txt`, `pyproject.toml`, or `setup.cfg`.\n2. Ensure the step installing dependencies (`pip install`, `poetry install`, `uv sync`) runs before executing code.\n3. If using an isolated virtual environment, verify it is activated in this CI step.",
+    "detection_rationale": "Matched signature 'DEP-001: Python Module Not Found' in log lines",
+    "confidence": 0.95,
+    "confidence_explanation": "Explicit ModuleNotFoundError traceback observed",
+    "is_primary_cause": true,
+    "evidence": [
+      {
+        "line_number": 15,
+        "matched_text": "ModuleNotFoundError: No module named 'pydantic_settings'",
+        "context_lines": [
+          {
+            "line": 12,
+            "text": "Traceback (most recent call last):"
+          },
+          {
+            "line": 13,
+            "text": "File \"/home/runner/work/repo/tests/test_api.py\", line 4, in <module>"
+          },
+          {
+            "line": 14,
+            "text": "from pydantic_settings import BaseSettings"
+          },
+          {
+            "line": 15,
+            "text": "ModuleNotFoundError: No module named 'pydantic_settings'"
+          },
+          {
+            "line": 16,
+            "text": "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!"
+          }
+        ],
+        "metadata": {
+          "module": "pydantic_settings"
+        }
+      }
+    ],
+    "related_symptoms": [],
+    "limitations": null
+  },
+  "findings_count": 1,
+  "findings": [
+    {
+      "rule_id": "DEP-001",
+      "rule_version": "1.0.0",
+      "title": "Missing Python Dependency: 'pydantic_settings'",
+      "description": "The build failed because Python module 'pydantic_settings' is not installed or not included in your environment specification.",
+      "category": "Dependency Resolution",
+      "severity": "HIGH",
+      "remediation": "1. Add 'pydantic_settings' to your `requirements.txt`, `pyproject.toml`, or `setup.cfg`.\n2. Ensure the step installing dependencies (`pip install`, `poetry install`, `uv sync`) runs before executing code.\n3. If using an isolated virtual environment, verify it is activated in this CI step.",
+      "detection_rationale": "Matched signature 'DEP-001: Python Module Not Found' in log lines",
+      "confidence": 0.95,
+      "confidence_explanation": "Explicit ModuleNotFoundError traceback observed",
+      "is_primary_cause": true,
+      "evidence": [
+        {
+          "line_number": 15,
+          "matched_text": "ModuleNotFoundError: No module named 'pydantic_settings'",
+          "context_lines": [
+            {
+              "line": 12,
+              "text": "Traceback (most recent call last):"
+            },
+            {
+              "line": 13,
+              "text": "File \"/home/runner/work/repo/tests/test_api.py\", line 4, in <module>"
+            },
+            {
+              "line": 14,
+              "text": "from pydantic_settings import BaseSettings"
+            },
+            {
+              "line": 15,
+              "text": "ModuleNotFoundError: No module named 'pydantic_settings'"
+            },
+            {
+              "line": 16,
+              "text": "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!"
+            }
+          ],
+          "metadata": {
+            "module": "pydantic_settings"
+          }
+        }
+      ],
+      "related_symptoms": [],
+      "limitations": null
+    }
+  ],
+  "cascading_failures": [
+    {
+      "rule_id": "CAS-001",
+      "rule_version": "1.0.0",
+      "title": "Non-Zero Exit Code (Cascading Exit)",
+      "description": "A build step exited with a non-zero exit code as a consequence of an earlier error.",
+      "category": "Downstream Cascading Error",
+      "severity": "LOW",
+      "remediation": "Review earlier error findings to resolve the primary failure trigger.",
+      "detection_rationale": "Matched signature 'CAS-001: Downstream Process Exit Code' in log lines",
+      "confidence": 0.7,
+      "confidence_explanation": "Generic non-zero exit code following a build step failure",
+      "is_primary_cause": false,
+      "evidence": [
+        {
+          "line_number": 17,
+          "matched_text": "##[error]Process completed with exit code 1.",
+          "context_lines": [
+            {
+              "line": 16,
+              "text": "!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!"
+            },
+            {
+              "line": 17,
+              "text": "##[error]Process completed with exit code 1."
+            }
+          ],
+          "metadata": {}
+        }
+      ],
+      "related_symptoms": [],
+      "limitations": null
+    }
+  ],
+  "alternative_hypotheses": [],
+  "missing_evidence": [],
+  "baseline_comparison": null,
+  "metadata": {
+    "rules_evaluated": 17,
+    "steps_detected": [
+      "Run actions/checkout@v4",
+      "Run actions/setup-python@v5",
+      "Run pip install -r requirements.txt",
+      "Run pytest tests/"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+2025-10-10T10:00:01.0000000Z ##[group]Run actions/checkout@v4
+2025-10-10T10:00:01.2000000Z Syncing repository to /home/runner/work/repo
+2025-10-10T10:00:02.0000000Z ##[group]Run actions/setup-python@v5
+2025-10-10T10:00:02.1000000Z Installed Python 3.11.8
+2025-10-10T10:00:03.0000000Z ##[group]Run pip install -r requirements.txt
+2025-10-10T10:00:04.0000000Z Successfully installed fastapi-0.110.0 pydantic-settings-2.2.1
+2025-10-10T10:00:05.0000000Z ##[group]Run pytest tests/
+2025-10-10T10:00:06.0000000Z ============================= test session starts ==============================
+2025-10-10T10:00:07.0000000Z tests/test_api.py .... [100%]
+2025-10-10T10:00:08.0000000Z ============================== 4 passed in 0.52s ===============================
+2025-10-10T10:00:09.0000000Z ##[group]Run Build Completed
+2025-10-10T10:00:10.0000000Z All steps completed successfully.

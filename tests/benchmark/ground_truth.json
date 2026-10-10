@@ -1,0 +1,79 @@
+[
+  {
+    "id": "case_01",
+    "filename": "case_01_dep_missing.log",
+    "expected_rule": "DEP-001",
+    "expected_line": 9,
+    "category": "Dependency"
+  },
+  {
+    "id": "case_02",
+    "filename": "case_02_docker_oom.log",
+    "expected_rule": "OOM-001",
+    "expected_line": 6,
+    "category": "Resource"
+  },
+  {
+    "id": "case_03",
+    "filename": "case_03_npm_eresolve.log",
+    "expected_rule": "DEP-003",
+    "expected_line": 2,
+    "category": "Dependency"
+  },
+  {
+    "id": "case_04",
+    "filename": "case_04_gha_timeout.log",
+    "expected_rule": "TIM-001",
+    "expected_line": 4,
+    "category": "Timeout"
+  },
+  {
+    "id": "case_05",
+    "filename": "case_05_disk_full.log",
+    "expected_rule": "DSK-001",
+    "expected_line": 3,
+    "category": "Infrastructure"
+  },
+  {
+    "id": "case_06",
+    "filename": "case_06_auth_failed.log",
+    "expected_rule": "SEC-001",
+    "expected_line": 2,
+    "category": "Auth"
+  },
+  {
+    "id": "case_07",
+    "filename": "case_07_env_missing.log",
+    "expected_rule": "SEC-002",
+    "expected_line": 3,
+    "category": "Auth"
+  },
+  {
+    "id": "case_08",
+    "filename": "case_08_pytest_assert.log",
+    "expected_rule": "TST-001",
+    "expected_line": 3,
+    "category": "Testing"
+  },
+  {
+    "id": "case_09",
+    "filename": "case_09_net_dns.log",
+    "expected_rule": "NET-001",
+    "expected_line": 2,
+    "category": "Network"
+  },
+  {
+    "id": "case_10",
+    "filename": "case_10_negative_clean_success.log",
+    "expected_rule": null,
+    "expected_line": null,
+    "category": "NegativeControl"
+  },
+  {
+    "id": "case_11",
+    "filename": "case_11_ambiguous_unknown.log",
+    "expected_rule": null,
+    "expected_line": null,
+    "category": "UnknownFailure"
+  }
+]

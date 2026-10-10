@@ -1,0 +1,4 @@
+2025-10-10T17:00:00Z ##[group]Run pytest
+2025-10-10T17:00:01Z tests/test_core.py .F
+2025-10-10T17:00:02Z FAILED tests/test_core.py::test_math - AssertionError: 4 != 5
+2025-10-10T17:00:03Z ##[error]Process completed with exit code 1.

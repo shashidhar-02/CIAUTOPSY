@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use CIAUTOPSY in your research or engineering workflows, please cite it as below."
+title: "CIAUTOPSY: Deterministic, Evidence-Based Root Cause Analysis for CI/CD Failure Logs"
+version: 0.1.0
+date-released: 2026-10-10
+url: "https://github.com/shashidhar-02/CIAUTOPSY"
+license: MIT
+authors:
+  - name: "CIAUTOPSY Contributors"
+keywords:
+  - "ci-cd"
+  - "devops"
+  - "debugging"
+  - "root-cause-analysis"
+  - "developer-tools"
+  - "log-analysis"
+  - "sre"

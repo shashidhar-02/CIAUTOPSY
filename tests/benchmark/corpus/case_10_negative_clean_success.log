@@ -1,0 +1,5 @@
+2025-10-10T19:00:00Z ##[group]Run build and test
+2025-10-10T19:00:01Z Build completed successfully.
+2025-10-10T19:00:02Z All 42 unit tests passed.
+2025-10-10T19:00:03Z Artifact published to s3://bucket/artifacts/
+2025-10-10T19:00:04Z Cleaning up runner workspace...

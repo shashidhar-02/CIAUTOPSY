@@ -1,0 +1,18 @@
+2025-10-10T15:00:01.0000000Z ##[group]Run docker build -t my-app .
+2025-10-10T15:00:02.0000000Z Step 1/7 : FROM node:20-alpine AS builder
+2025-10-10T15:00:03.0000000Z Step 2/7 : WORKDIR /app
+2025-10-10T15:00:04.0000000Z Step 3/7 : COPY package*.json ./
+2025-10-10T15:00:05.0000000Z Step 4/7 : RUN npm ci
+2025-10-10T15:00:15.0000000Z added 842 packages in 10s
+2025-10-10T15:00:16.0000000Z Step 5/7 : COPY . .
+2025-10-10T15:00:18.0000000Z Step 6/7 : RUN npm run build
+2025-10-10T15:00:20.0000000Z > my-app@1.0.0 build
+2025-10-10T15:00:20.1000000Z > next build
+2025-10-10T15:00:35.0000000Z Creating an optimized production build ...
+2025-10-10T15:01:10.0000000Z <--- Last few GCs --->
+2025-10-10T15:01:10.5000000Z [1:0x55d7b20]   65123 ms: Mark-sweep 2040.5 (2080.1) -> 2038.2 (2080.1) MB, 1200.0 / 0.0 ms  (average mu = 0.150, current mu = 0.012) allocation failure; scavenge might not succeed
+2025-10-10T15:01:11.0000000Z 
+2025-10-10T15:01:11.2000000Z <--- JS stacktrace --->
+2025-10-10T15:01:11.3000000Z FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+2025-10-10T15:01:12.0000000Z The command '/bin/sh -c npm run build' returned a non-zero code: 137
+2025-10-10T15:01:12.5000000Z ##[error]Process completed with exit code 137.
