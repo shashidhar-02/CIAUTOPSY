@@ -1,0 +1,12 @@
+{
+  "total_cases": 11,
+  "positive_cases": 9,
+  "top1_accuracy_pct": 100.0,
+  "top3_recall_pct": 100.0,
+  "evidence_line_accuracy_pct": 100.0,
+  "false_positive_rate_pct": 0.0,
+  "unknown_handling_accuracy_pct": 100.0,
+  "total_runtime_ms": 5.29,
+  "avg_latency_per_log_ms": 0.48,
+  "peak_memory_kb": 136.6
+}

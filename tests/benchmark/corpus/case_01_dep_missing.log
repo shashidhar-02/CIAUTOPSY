@@ -1,0 +1,10 @@
+2025-10-10T10:00:01Z ##[group]Run test suite
+2025-10-10T10:00:02Z Initializing environment...
+2025-10-10T10:00:03Z Traceback (most recent call last):
+2025-10-10T10:00:04Z   File "test.py", line 1, in <module>
+2025-10-10T10:00:05Z     import httpx
+2025-10-10T10:00:06Z   File "/env/lib/python3.11/site-packages/httpx/__init__.py", line 2, in <module>
+2025-10-10T10:00:07Z     import anyio
+2025-10-10T10:00:08Z   File "/env/lib/python3.11/site-packages/anyio/__init__.py", line 1, in <module>
+2025-10-10T10:00:09Z ModuleNotFoundError: No module named 'idna'
+2025-10-10T10:00:10Z ##[error]Process completed with exit code 1.

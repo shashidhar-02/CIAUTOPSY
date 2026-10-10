@@ -1,0 +1,7 @@
+2025-10-10T11:00:01Z ##[group]Run build image
+2025-10-10T11:00:02Z Step 1/3: RUN yarn build
+2025-10-10T11:00:15Z Bundling client bundle...
+2025-10-10T11:00:30Z <--- Last few GCs --->
+2025-10-10T11:00:31Z [1234:0x123] Mark-sweep allocation failure
+2025-10-10T11:00:32Z FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory
+2025-10-10T11:00:33Z ##[error]Process completed with exit code 137.

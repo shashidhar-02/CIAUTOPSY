@@ -1,0 +1,11 @@
+2025-10-10T11:00:00.0000000Z ##[group]Run actions/checkout@v4
+2025-10-10T11:00:01.0000000Z Head SHA: 9b2d8e4
+2025-10-10T11:00:02.0000000Z ##[group]Run pip install -r requirements.txt
+2025-10-10T11:00:05.0000000Z Installed dependencies successfully: pytest==8.2.0 requests==2.32.3
+2025-10-10T11:00:06.0000000Z ##[group]Run pytest tests/
+2025-10-10T11:00:07.0000000Z ============================= test session starts ==============================
+2025-10-10T11:00:08.0000000Z tests/test_core.py ....                                                 [ 50%]
+2025-10-10T11:00:09.0000000Z tests/test_api.py F...                                                  [100%]
+2025-10-10T11:00:09.5000000Z FAILED tests/test_api.py::test_endpoint - AssertionError: assert 401 == 200
+2025-10-10T11:00:10.0000000Z ========================= 1 failed, 7 passed in 2.20s =========================
+2025-10-10T11:00:10.5000000Z ##[error]Process completed with exit code 1.

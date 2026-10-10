@@ -1,0 +1,19 @@
+2025-10-10T14:00:01.1234567Z ##[group]Run actions/checkout@v4
+2025-10-10T14:00:01.2345678Z Syncing repository to /home/runner/work/repo
+2025-10-10T14:00:02.3456789Z ##[group]Run actions/setup-python@v5
+2025-10-10T14:00:02.4567890Z Installed Python 3.11.8
+2025-10-10T14:00:03.5678901Z ##[group]Run pip install -r requirements.txt
+2025-10-10T14:00:04.6789012Z Collecting fastapi>=0.100
+2025-10-10T14:00:05.7890123Z Successfully installed fastapi-0.110.0
+2025-10-10T14:00:06.8901234Z ##[group]Run pytest tests/
+2025-10-10T14:00:07.9012345Z ============================= test session starts ==============================
+2025-10-10T14:00:08.0123456Z collecting ... 
+2025-10-10T14:00:08.1234567Z Traceback (most recent call last):
+2025-10-10T14:00:08.2345678Z   File "/home/runner/work/repo/tests/test_api.py", line 4, in <module>
+2025-10-10T14:00:08.3456789Z     from app.config import Settings
+2025-10-10T14:00:08.4567890Z   File "/home/runner/work/repo/app/config.py", line 2, in <module>
+2025-10-10T14:00:08.5678901Z     from pydantic_settings import BaseSettings
+2025-10-10T14:00:08.6789012Z ModuleNotFoundError: No module named 'pydantic_settings'
+2025-10-10T14:00:08.7890123Z !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+2025-10-10T14:00:08.8901234Z =============================== 1 error in 0.42s ===============================
+2025-10-10T14:00:09.0012345Z ##[error]Process completed with exit code 1.

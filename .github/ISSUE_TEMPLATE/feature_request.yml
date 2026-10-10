@@ -1,0 +1,36 @@
+name: Feature Request / New Rule Proposal
+description: Propose a new diagnostic rule, log format support, or CLI improvement.
+title: "[FEATURE]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting improvements to CIAUTOPSY!
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Diagnostic Gap
+      description: What CI/CD failure pattern or workflow is currently difficult to diagnose?
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution or Rule Details
+      description: |
+        If proposing a diagnostic rule, please specify:
+        - Target ecosystem / tool (e.g. Gradle, Rust cargo, Terraform)
+        - Unique failure signature pattern
+        - Typical cascading noise associated with it
+        - Recommended remediation advice
+    validations:
+      required: true
+  - type: textarea
+    id: sample-log
+    attributes:
+      label: Sanitized Example Log Excerpt
+      description: Provide an anonymized sample log showing this failure.
+      render: shell
+    validations:
+      required: false

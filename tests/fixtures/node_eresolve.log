@@ -1,0 +1,15 @@
+2025-10-10T16:00:01.0000000Z ##[group]Run npm install
+2025-10-10T16:00:03.0000000Z npm ERR! code ERESOLVE
+2025-10-10T16:00:03.1000000Z npm ERR! ERESOLVE could not resolve
+2025-10-10T16:00:03.2000000Z npm ERR! 
+2025-10-10T16:00:03.3000000Z npm ERR! While resolving: react-router-dom@6.4.0
+2025-10-10T16:00:03.4000000Z npm ERR! Found: react@19.0.0
+2025-10-10T16:00:03.5000000Z npm ERR! node_modules/react
+2025-10-10T16:00:03.6000000Z npm ERR!   react@"^19.0.0" from the root project
+2025-10-10T16:00:03.7000000Z npm ERR! 
+2025-10-10T16:00:03.8000000Z npm ERR! Could not resolve dependency:
+2025-10-10T16:00:03.9000000Z npm ERR! peer react@">= 16.8" from react-router-dom@6.4.0
+2025-10-10T16:00:04.0000000Z npm ERR! 
+2025-10-10T16:00:04.1000000Z npm ERR! Conflicting peer dependency: react@18.2.0
+2025-10-10T16:00:04.2000000Z npm ERR! A complete log can be found in: /home/runner/.npm/_logs/debug.log
+2025-10-10T16:00:05.0000000Z ##[error]Process completed with exit code 1.

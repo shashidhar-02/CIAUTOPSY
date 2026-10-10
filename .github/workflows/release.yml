@@ -1,0 +1,84 @@
+name: Release & Publish
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: read
+
+jobs:
+  test-and-validate:
+    name: Validate Release Candidate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Run Ruff Lint & Format Checks
+        run: |
+          python -m ruff check .
+          python -m ruff format --check .
+
+      - name: Run Mypy Type Checks
+        run: python -m mypy src/ciautopsy
+
+      - name: Run Tests with Coverage
+        run: python -m pytest -v
+
+      - name: Run Benchmark Suite
+        run: python scripts/run_benchmark.py
+
+  build-and-publish:
+    name: Build & Publish to PyPI
+    needs: test-and-validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # Needed to create GitHub Release
+      id-token: write # Needed for PyPI Trusted Publishing via OIDC
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install build tools
+        run: |
+          python -m pip install --upgrade pip
+          pip install build twine
+
+      - name: Build distributions
+        run: python -m build
+
+      - name: Validate distributions with Twine
+        run: python -m twine check dist/*
+
+      - name: Publish package distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          # Uses PyPI Trusted Publishing (OIDC) - requires configuring
+          # the trusted publisher on PyPI for this repository.
+          skip-existing: true
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*
+          generate_release_notes: true

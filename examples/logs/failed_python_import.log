@@ -1,0 +1,17 @@
+2025-10-10T14:00:01.0000000Z ##[group]Run actions/checkout@v4
+2025-10-10T14:00:01.1000000Z Authenticating with token: ghp_DEMO_TOKEN_123456789012345678901234567890
+2025-10-10T14:00:01.2000000Z Syncing repository to /home/runner/work/repo
+2025-10-10T14:00:02.0000000Z ##[group]Run actions/setup-python@v5
+2025-10-10T14:00:02.1000000Z Installed Python 3.11.8
+2025-10-10T14:00:03.0000000Z ##[group]Run pip install -r requirements.txt
+2025-10-10T14:00:04.0000000Z WARNING: Running pip as the 'root' user can result in broken permissions.
+2025-10-10T14:00:05.0000000Z Successfully installed fastapi-0.110.0
+2025-10-10T14:00:06.0000000Z ##[group]Run pytest tests/
+2025-10-10T14:00:07.0000000Z ============================= test session starts ==============================
+2025-10-10T14:00:07.5000000Z tests/test_api.py:12: UserWarning: Database mock will be deprecated in v2
+2025-10-10T14:00:08.0000000Z Traceback (most recent call last):
+2025-10-10T14:00:08.1000000Z   File "/home/runner/work/repo/tests/test_api.py", line 4, in <module>
+2025-10-10T14:00:08.2000000Z     from pydantic_settings import BaseSettings
+2025-10-10T14:00:08.3000000Z ModuleNotFoundError: No module named 'pydantic_settings'
+2025-10-10T14:00:08.4000000Z !!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+2025-10-10T14:00:09.0000000Z ##[error]Process completed with exit code 1.

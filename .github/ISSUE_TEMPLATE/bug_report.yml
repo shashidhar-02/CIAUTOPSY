@@ -1,0 +1,48 @@
+name: Bug Report
+description: Report unexpected behavior, false-positive/negative diagnoses, or crashes.
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue!
+        **Privacy Reminder:** Please DO NOT paste production credentials, private tokens, internal domain names, or secrets.
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the Bug
+      description: A clear and concise description of what went wrong.
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: CIAUTOPSY Version
+      description: Run `ciautopsy version` to find this.
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system and Python version.
+      placeholder: "Ubuntu 22.04, Python 3.11"
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce & Sanitized Log Snippet
+      description: Provide the command run and a minimal, sanitized log snippet (10-30 lines) demonstrating the issue.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs Actual Diagnosis
+      description: What rule or root cause did you expect to see, versus what was reported?
+    validations:
+      required: true
