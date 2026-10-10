@@ -21,7 +21,7 @@ GROUND_TRUTH_PATH = BENCHMARK_DIR / "ground_truth.json"
 CORPUS_DIR = BENCHMARK_DIR / "corpus"
 
 
-def run_benchmark() -> dict[str, float | int | str]:
+def run_benchmark() -> dict[str, float | int]:
     """Runs the synthetic benchmark suite and measures honest empirical performance."""
     if not GROUND_TRUTH_PATH.exists():
         sys.stderr.write(f"Ground truth not found: {GROUND_TRUTH_PATH}\n")
